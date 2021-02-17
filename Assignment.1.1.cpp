@@ -42,7 +42,7 @@ int main()
 
     cout << "Total sales for Class C: $" << c_total << "." << endl;
 
-    cout << "Total sales for all classes: $" << everything;
+    cout << "Total sales for all classes: $" << everything <<".";
 
     return 0;
 
