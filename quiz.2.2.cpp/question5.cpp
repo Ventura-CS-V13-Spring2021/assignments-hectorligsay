@@ -12,17 +12,18 @@ int main()
 {
     int range1 , range2 ;
     int p, i;
+    int flag = 0;
 
         cout << "Enter the range (first number must be smaller than second): " << endl;
         cin >> range1 >> range2;
 
     for ( p = range1; p <= range2; p++ )
     {
-        for (i = 2; i <= (p/2); i ++)
+        for (i = 2; i < p; i ++)
             if (p % i == 0)
                 break;
 
-        if ( i >= (p/2) )
+        if ( i >= p )
             cout << p << " is a prime number." << endl;
         else
             cout << p << " is not prime" << endl;
