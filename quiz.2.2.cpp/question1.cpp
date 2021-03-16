@@ -34,7 +34,5 @@ int main()
 
 
   cout << max << endl;
-
-
 }
 
