@@ -20,19 +20,50 @@ int main()
         {cout << "This is not a valid entry";
         }
   else  
-    if ( max < num2 )
+    if ( num1 < num2 )
       max = num2;
-    else if ( max < num3 )
+    else if ( num2 < num3 )
       max = num3;  
-    else if ( max < num4 )
+    else if ( num3 < num4 )
       max = num4;  
-    else if ( max < num5 )
+    else if ( num4 < num5 )
       max = num5;
     
-  if (max = num2)
+  if (max == num1)
+    if (max2<num2)
+      max2 = num1;
+    else if (max2 < num3)
+      max2 = num3;
+    else if (max2 < num4)
+      max2 = num4;
+    else if (max2 < num5)
+      max2 = num5;
+
+  else if (max == num2)
+    if (max2<num1)
+      max2 = num1;
+    else if (max2 < num3)
+      max2 = num3;
+    else if (max2 < num4)
+      max2 = num4;
+    else if (max2 < num5)
+      max2 = num5;
+  
+  else if (max == num3)
+    if (max2<num1)
+      max2 = num1;
+    else if (max2 < num3)
+      max2 = num2;
+    else if (max2 < num4)
+      max2 = num4;
+    else if (max2 < num5)
+      max2 = num5;
+    
+    
     
 
-
   cout << max << endl;
+
+
 }
 
