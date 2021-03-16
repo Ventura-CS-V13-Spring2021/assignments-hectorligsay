@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include <stdlib.h>
+#include <cstdlib.h>
 using namespace std;
 //This program enters 5 random numbers and will find a number greater than the previous number
 
