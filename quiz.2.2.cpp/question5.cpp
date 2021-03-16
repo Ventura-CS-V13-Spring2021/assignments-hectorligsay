@@ -19,7 +19,7 @@ int main()
 
     for ( p = range1; p <= range2; p++ )
     {
-        for (i = 2; i < p; i ++)
+        for (i = 2; i <= p; i ++)
             if (p % i == 0)
                 break;
 
