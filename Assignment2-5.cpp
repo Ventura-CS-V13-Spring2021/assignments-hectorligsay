@@ -30,7 +30,7 @@ int main()
 
         if ( i >= p )
         {
-          cout << p << " is a prime." << endl;
+          cout << p << " is prime." << endl;
         }
         else 
           cout << p << " is not prime." << endl;
