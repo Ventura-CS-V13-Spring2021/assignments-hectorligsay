@@ -15,7 +15,7 @@ int main()
 
 
     do{
-        cout << "Enter the range (first number must be larger than second): " << endl;
+        cout << "Enter the range (first number must be smaller than second): " << endl;
         cin >> range1 >> range2;
     } while (range1 >= range2 || range1 <2 || range2 <0) ;
     
@@ -23,13 +23,17 @@ int main()
     {
         if ( p== 0 || p== 1)
             continue;
-        for (i = 2; i <= (p/ 2); i ++)
-            if (p % i == 0)
+        for (i = 2; (i <= p); i ++)
+            {if (p % i == 0)
                 break;
+            }
 
-        if ( i > (p/2) )
-            cout << p << " is a prime number." << endl;
-
+        if ( i >= p )
+        {
+          cout << p << " is a prime." << endl;
+        }
+        else 
+          cout << p << " is not prime." << endl;
     }
     return 0;
 }
