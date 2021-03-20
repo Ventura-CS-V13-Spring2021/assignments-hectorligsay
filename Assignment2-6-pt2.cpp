@@ -1,10 +1,8 @@
-#include <iostream>                                         // #include <bits/stdc++.h>   Use this in Replit if INT_MIN & INT_MAX don't work
-#include <fstream>                                                           
+#include <iostream>    
+#include <iomanip>
+#include <fstream>               
+#include <bits/stdc++.h>                                     
 using namespace std;                                           
-
-// Questions for Tutoring:      1) How do I find max and min without using INT_MAX & INT_MIN?
-//                              2) How do I make this happen when the file is opened just once? 
-//                              3) Why won't arc4random work in replit?
 
 // This program will read integers from the file in FileIO2-4-1.cpp
 // This will find the total number of integers we read, and the summatino
@@ -13,7 +11,10 @@ using namespace std;
 int main()
 {
     
-    int rdnum, min = INT_MAX, max = INT_MIN, count = 0;
+    int rdnum;
+    int max = INT_MIN; 
+    int min = INT_MAX;
+    int count = 0;
     float sum = 0, avg;
     ifstream rdfile;                                        // ifstream allows you to READ file only
 
@@ -24,8 +25,8 @@ int main()
 
     
     // Find the SUM
-    while (rdfile >> rdnum )                                // USE WHILE LOOP instead of for loop to check whatever user input because for loop is too limited 
-    {                                                       // Also don't use fail status or else it'll write last line twice                                      
+    while (rdfile >> rdnum )                                
+    {                                                         
         sum += rdnum;                               
         cout << rdnum << endl;
         count ++;
