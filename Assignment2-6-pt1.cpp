@@ -21,20 +21,14 @@ int main()
 
     cin >> N;                                                   // Gives user's value to N
 
-    //These will show the actual numbers of lines that will be set
-    // This is good to add for developers to check information
-    //                              rdfile << N << endl;
 
-    // Creates seed for rand numbs and avoids pseudorandom numbers 
-    srand(time(0)); 
+    // Creates seed for rand numbs and avoids pseudorandom number creation
+    srand(time(NULL)); 
+    
   
-    // Below will loop numbers before user input N and shows them on N amount of lines.
-    // Don't forget to initialize i or else it will NOT work
-    // random() will create one set of random numbers
-    // arc4random() will create new randoms every time you run it
     for (int i = 0; i<N ; i++)
     {
-        rdnum = rand() % 100;
+        rdnum =(rand() % 100) + 1;
         rdfile << rdnum << endl;
     }
 

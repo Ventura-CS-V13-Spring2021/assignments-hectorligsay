@@ -1,7 +1,10 @@
-#include <iostream>
-#include <fstream>
-#include <bits/stdc++.h>
-using namespace std;
+#include <iostream>                                         // #include <bits/stdc++.h>   Use this in Replit if INT_MIN & INT_MAX don't work
+#include <fstream>                                                           
+using namespace std;                                           
+
+// Questions for Tutoring:      1) How do I find max and min without using INT_MAX & INT_MIN?
+//                              2) How do I make this happen when the file is opened just once? 
+//                              3) Why won't arc4random work in replit?
 
 // This program will read integers from the file in FileIO2-4-1.cpp
 // This will find the total number of integers we read, and the summatino
@@ -27,33 +30,25 @@ int main()
         cout << rdnum << endl;
         count ++;
 
-    //Finds the MIN 
-        if (rdnum < min)                                            
-        {
-            min = rdnum;
-        }
-    }
-
-    // FINDS AVERAGE
-    avg = sum / count;                                              
-
-    rdfile.close();                                         // Closes and re-opens program bc I can't find a better way to do this in one opened file
-    rdfile.open("rdnum.txt");               
-
-    while (rdfile >> rdnum)
-    {
         if (rdnum > max)
         {
             max = rdnum;
         }
+
+        else if (rdnum < min)                                            
+        {
+            min = rdnum;
+        }
+        avg = sum / count;                                              
+
     }
 
     // PRINTS OUT TO CONSOLE
     cout << "-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-\n";
     cout << "There are " << count << " random numbers." << endl;
-    cout << "The sum of these numbers is " << sum << "." << endl; 
-    cout << setprecision(2) << "The average of these numbers is " << avg << "." << endl;
-    cout << "The minimum is " << min << "." << endl;
-    cout << "The maximum is " << max << "." << endl;    
+    cout << "The sum of these numbers is " << sum << '.' << endl; 
+    cout << setprecision(2) << "The average of these numbers is " << avg << '.' << endl;
+    cout << "The minimum is " << min << '.' << endl;
+    cout << "The maximum is " << max << '.' << endl;    
     rdfile.close();
 }
