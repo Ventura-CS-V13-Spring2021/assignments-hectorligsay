@@ -27,7 +27,7 @@ int main()
 
     // Creates seed for rand numbs and avoids pseudorandom numbers 
     srand(time(0)); 
-    void srand(int seed);
+  
     // Below will loop numbers before user input N and shows them on N amount of lines.
     // Don't forget to initialize i or else it will NOT work
     // random() will create one set of random numbers
