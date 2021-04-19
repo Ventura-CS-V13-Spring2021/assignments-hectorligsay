@@ -5,7 +5,7 @@
 using namespace std;
 
 int getRdnum(void);
-int isGreater(int n);
+int isGreater(int &n);
 
 
 int main()
@@ -46,7 +46,7 @@ int getRdnum(void)
   rdnum =(rand() % 51);
 }
 
-int isGreater(int n)
+int isGreater(int &n)
 {
   int prec;
   for (int i = 0; i < 10; i++)
