@@ -21,13 +21,14 @@ int main()
   for (int i = 0; i<N ; i++)
   {
     rdnum = getRdnum();
-
-    if (flag == 0);
+    cout << rdnum << endl;
+    if (flag == 0)
     {
-      exit (0);
+      continue;
     }
-    else
+    else 
       isGreater(rdnum);
+      rdfile << rdnum << endl;
   }      
 
   rdfile.close();
@@ -41,19 +42,19 @@ int getRdnum(void)
 
 int isGreater(int n)
 {
-  int prec, rdnum;
-  if ( rdnum == 0 )
+  int prec;
+  if ( n == 0 )
   {
-    prec = rdnum;
+    prec = n;
     return 0;
   }
 
-  if (prec < rdnum)
+  if (prec < n)
   {
-    cout << rdnum << endl;
+    cout << n << endl;
     return 1;
   }
-  prec = rdnum;
+  prec = n;
 
   
 }
