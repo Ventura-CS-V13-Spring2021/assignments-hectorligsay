@@ -10,32 +10,25 @@ int isGreater(int n);
 
 int main()
 {
-  int rdnum, prec;
+  int rdnum, flag;
   int N = 10;
-  ofstream    rdfile;                                         //ofstream will WRITE the file only
+  ofstream    rdfile;                                         //ofstream will WRITE the file only     
 
-  rdfile.open("rdnum.txt");                                   
+  rdfile.open("rdnum.txt");                        
                            
-
   srand(time(NULL)); 
-  
+  // Generates random numbers 
   for (int i = 0; i<N ; i++)
   {
-  
-    getRdnum();
+    rdnum = getRdnum();
 
-    if ( i == 0 )
+    if (flag == 0);
     {
-      prec = rdnum;
-      continue;
+      exit (0);
     }
-
-    if (prec < rdnum)
-    {
-      rdfile << rdnum << endl;
-    }
-    prec = rdnum;
-  }
+    else
+      isGreater(rdnum);
+  }      
 
   rdfile.close();
 }
@@ -44,10 +37,23 @@ int getRdnum(void)
 {
   int rdnum;
   rdnum =(rand() % 51);
-  cout << rdnum << endl;
 }
 
-int isGreater(num)
+int isGreater(int n)
 {
+  int prec, rdnum;
+  if ( rdnum == 0 )
+  {
+    prec = rdnum;
+    return 0;
+  }
 
+  if (prec < rdnum)
+  {
+    cout << rdnum << endl;
+    return 1;
+  }
+  prec = rdnum;
+
+  
 }
