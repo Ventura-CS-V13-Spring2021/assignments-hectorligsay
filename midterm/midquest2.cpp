@@ -9,7 +9,7 @@ int isGreater(int , int );
 
 int main()
 {
-  int rdnum, flag, prec;
+  int rdnum, prec;
   string answer;
   int N = 10;
   ofstream    rdfile;  
@@ -24,7 +24,7 @@ int main()
     for (int i = 0; i<N ; i++)
     {
       rdnum = getRdnum();
-      cout << rdnum << endl;
+      cout << rdnum << endl;   // This is to check the
 
       if ( i == 0 )
       {
@@ -59,6 +59,7 @@ int getRdnum(void)
 
 int isGreater(int n, int prec)
 {
+  
   if (prec < n)
   {
     return 1;
