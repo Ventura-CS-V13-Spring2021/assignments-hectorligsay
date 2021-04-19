@@ -7,48 +7,47 @@ using namespace std;
 int getRdnum(void);
 int isGreater(int n);
 
+
 int main()
 {
-  int N = 10, num;
-  ofstream    rdfile;                      
+  int rdnum, prec;
+  int N = 10;
+  ofstream    rdfile;                                         //ofstream will WRITE the file only
 
   rdfile.open("rdnum.txt");                                   
                            
+
+  srand(time(NULL)); 
   
   for (int i = 0; i<N ; i++)
   {
-    num = getRdnum();
-    
-    if (isGreater(num) == 1)
+  
+    getRdnum();
+
+    if ( i == 0 )
     {
-      rdfile << num << endl;
+      prec = rdnum;
+      continue;
     }
+
+    if (prec < rdnum)
+    {
+      rdfile << rdnum << endl;
+    }
+    prec = rdnum;
   }
 
   rdfile.close();
-
 }
 
-int getRdnum(int rdnum)
+int getRdnum(void)
 {
-  srand(time(NULL)); 
+  int rdnum;
   rdnum =(rand() % 51);
-  return rdnum;
+  cout << rdnum << endl;
 }
 
-int isGreater(int num)
+int isGreater(num)
 {
-  int prec, i;
 
-  if ( i == 0 )
-    {
-      prec = num;
-      return 0;
-    }
-
-    if (prec < num)
-    {
-      return 1;
-    }
-    prec = num;
 }
