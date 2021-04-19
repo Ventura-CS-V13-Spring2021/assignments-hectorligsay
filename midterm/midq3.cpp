@@ -15,11 +15,13 @@ int main()
   int rdnum, num1, num2, num3;
   int max, min, difference;
   int N = 3;
+  string answer;
   ofstream    midterm;                           
 
-  midterm.open("question3.txt");                        
-                           
+  midterm.open("question3.txt");     
+
   srand(time(NULL)); 
+  do{                         
   // Generates random numbers 
   
   num1 = getRdnum();
@@ -38,7 +40,11 @@ int main()
   cout << "The difference is : " << difference << endl;
 
   // This will ONLY write difference into the file
-  fileWrite(midterm, difference); 
+  fileWrite(midterm, difference);
+
+  cout << "Would you like to run it again? (y/n)";
+  cin >> answer;
+  } while (answer == "Y" || answer == "y");
 
   midterm.close();
 }
