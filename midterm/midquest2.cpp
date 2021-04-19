@@ -10,7 +10,7 @@ int isGreater(int n);
 
 int main()
 {
-  int rdnum, flag;
+  int rdnum;
   int N = 10;
   ofstream    rdfile;                                         //ofstream will WRITE the file only     
 
@@ -22,12 +22,11 @@ int main()
   {
     rdnum = getRdnum();
     cout << rdnum << endl;
-    if (flag == 0)
+    if (isGreater(rdnum) == 0)
     {
       continue;
     }
-    else 
-      isGreater(rdnum);
+    else if (isGreater(rdnum) == 1)
       rdfile << rdnum << endl;
   }      
 
