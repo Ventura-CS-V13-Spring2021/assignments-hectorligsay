@@ -7,9 +7,10 @@ int main()
 {
 
   string studentname;
-  int score1, score2;
+  int score1, score2, num80;
   int count = 0;
-  float sum = 0, avg;
+  float sum = 0;
+  double avg;
   ifstream studentinfo;
 
   studentinfo.open("students.txt");
@@ -21,13 +22,21 @@ int main()
       exit (0);
   }
 
-  //Set the template on console
-  cout << "Name:" << setw(12) << "Score 1:" << setw(16)<< "Score 2:" << setw(16) << "Sum:" << setw(16) << "Average:\n";
-
   while (studentinfo >> studentname >> score1 >> score2)
   {
     sum = score1 + score2;
-    cout << studentname << setw(12) << score1 << setw(16) << score2 << ave
-  }
+    avg = sum / 2;
+    cout << "Student name: " << studentname << setw(12) << "Score 1: " << score1 << setw(16) << "Score 2: " << score2 << setw(16) << "Sum: " << sum << setw(16) << "Average: " << avg << endl;
 
+    if (avg>80)
+    {
+      num80 ++;
+    }
+  }
+  cout << "*******************************************" << endl;
+  cout << "The total number of students who has the average > 80 : " << num80 << " students" << endl;
+  
+  studentinfo.close();
+
+  return 0;
 }
