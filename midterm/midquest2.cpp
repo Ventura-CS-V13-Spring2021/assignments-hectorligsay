@@ -4,41 +4,51 @@
 #include <fstream>
 using namespace std;
 
-//int getRdnum(void);
-//int isGreater(int n);
-
+int getRdnum(void);
+int isGreater(int n);
 
 int main()
 {
-
-  int rdnum, prec;
-  int N = 10;
-  ofstream    rdfile;                                         //ofstream will WRITE the file only
+  int N = 10, num;
+  ofstream    rdfile;                      
 
   rdfile.open("rdnum.txt");                                   
                            
-
-  srand(time(NULL)); 
   
   for (int i = 0; i<N ; i++)
   {
-    rdnum =(rand() % 51);
-
-    cout << rdnum << endl;
-
-    if ( i == 0 )
+    num = getRdnum();
+    
+    if (isGreater(num) == 1)
     {
-      prec = rdnum;
-      continue;
+      rdfile << num << endl;
     }
-
-    if (prec < rdnum)
-    {
-      rdfile << rdnum << endl;
-    }
-    prec = rdnum;
   }
 
   rdfile.close();
 
+}
+
+int getRdnum(int rdnum)
+{
+  srand(time(NULL)); 
+  rdnum =(rand() % 51);
+  return rdnum;
+}
+
+int isGreater(int num)
+{
+  int prec, i;
+
+  if ( i == 0 )
+    {
+      prec = num;
+      return 0;
+    }
+
+    if (prec < num)
+    {
+      return 1;
+    }
+    prec = num;
 }
