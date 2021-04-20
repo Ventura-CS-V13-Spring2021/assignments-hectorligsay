@@ -25,11 +25,18 @@ int main()
     {
       rdnum = getRdnum();
       cout << rdnum << endl;   // This is to check the
+
+      if ( i == 0 )
+      {
+        prec = rdnum;
+      }
+
       
       if (isGreater(rdnum, prec) == 1)
       {
         rdfile << rdnum <<  " is greater " << endl;
       }
+      prec = rdnum;
 
     }
     cout << "Would you like to go again? " << endl;
@@ -52,23 +59,17 @@ int getRdnum(void)
 
 int isGreater(int n, int prec)
 {
-  int N = 10;
-  for (int i = 0; i<N ; i++)
+  
+  if (prec < n)
   {
-    if (i == 0 )
-    {
-      prec = n;
-    }
-
-    if (prec < n)
-    { return 1;
-      prec = n;
-    }
-    else if (prec > n)
-    {
-      return 0;
-    }
+    return 1;
   }
+  else
+  {
+    return 0;
+  }
+  
 }
+
 
 
