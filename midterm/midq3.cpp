@@ -52,7 +52,7 @@ int main()
 int getRdnum(void)
 {
   int rdnum;
-  rdnum =(rand() % 51);
+  rdnum =(rand() % 10);
 }
 
 int findMax(int num1, int num2, int num3)
