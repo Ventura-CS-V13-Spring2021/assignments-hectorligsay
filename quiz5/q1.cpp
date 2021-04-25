@@ -9,21 +9,25 @@ int main()
   int     diff[SIZE];
   int   sum = 0;
 
+  cout << "Original Array: " << endl;
   for (int i = 0; i<SIZE; i++)
   {
     sum += numbers[i];
     cout << numbers[i] << "\t";
   }
-  
+
   cout << endl;
-  cout << "+++++++++++++++++++++++++"<< endl;
+  cout << "+++++++++++++++++++++++++++++++++++++++++"<< endl;
   cout << endl;
+
+  cout << "Difference: " << endl;
   for (int i = 0; i<SIZE; i++)
   {
     diff[i] = sum - numbers[i];
     cout << diff[i] << "\t";
   }
 
+  cout << endl;
   cout << endl;
   cout << "Array size is: " << SIZE << endl;
   cout << "The sum of the array is : " << sum << endl; 
