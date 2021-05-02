@@ -1,8 +1,8 @@
 CC = g++
 CFLAGS = I
-DEPS1 = IntegerArray.hpp  #//(this is fake fx)   // Dependency 
+header = IntegerArray.hpp  #//(this is fake fx)   // Dependency 
 
-%.o: %.c $(DEPS1)
+%.o: %.c $(header)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 buildall: main.o IntegerArray.o
