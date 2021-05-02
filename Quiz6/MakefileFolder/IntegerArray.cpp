@@ -16,29 +16,28 @@ int IntegerArray::getLength(void){
 void IntegerArray::sortArray(int flag){
     if (flag == 0)
     {
-        //ascending
-        sort(numbers, numbers + length);
-        cout << "Ascending: \n";
-        cout << "Sorted Array " << "\t";
+      //ascending
+      sort(numbers, numbers + length);
+      cout << "Ascending: \n";
+      cout << "Sorted Array " << "\t";
 
-        // Finds ascending
-        for (int i = 0; i < length; i ++)
-        {
-            
-            cout << numbers[i] << "\t";
-        }   cout << "\n" << endl;
+      // Finds ascending
+      for (int i = 0; i < length; i ++)
+      {
+        cout << numbers[i] << "\t";
+      } cout << "\n" << endl;
     }
     else 
     {    
-        //descending
-        sort(numbers, numbers + length, greater<int>());
-        cout << "Descending: \n";
-        cout << "Sorted Array " << "\t";
+      //descending
+      sort(numbers, numbers + length,greater<int>());
+      cout << "Descending: \n";
+      cout << "Sorted Array " << "\t";
 
-        for (int i = 0; i < length; i ++)
-        {
-            cout << numbers[i] << "\t";
-        } cout << "\n" << endl;
+      for (int i = 0; i < length; i ++)
+      {
+          cout << numbers[i] << "\t";
+      } cout << "\n" << endl;
     }
 }
 
@@ -71,8 +70,8 @@ void IntegerArray::getPrimenumbers(void) const {
       int j;
       for (j = 2; j <= numbers[i]; j ++)
       {
-          if (numbers[i] % j == 0)
-              break;
+        if (numbers[i] % j == 0)
+          break;
       }
 
       if ( j >= numbers[i] )
@@ -81,8 +80,8 @@ void IntegerArray::getPrimenumbers(void) const {
         count ++;
       }
       else
-          //cout << numbers[i] << " is not prime" << endl;
-          continue;
+        //cout << numbers[i] << " is not prime" << endl;
+        continue;
     }
     cout << count << endl;
 }
