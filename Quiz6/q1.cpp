@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-#inlude <iomanip>
+#include <iomanip>
 #include "IntegerArray.hpp"
 using namespace std;
 
@@ -14,7 +14,21 @@ class IntegerArray
     int getLength(void) const;  // gets current length
     void sortArray(int flag); // if flag = 0, ascend else descend
     void fillUp(void);      // fills randnums 0-99
+    void getPrimenumber(void) const;
+    void printAll(void) const;
 };
+
+int IntegerArray::getLength(void) const     
+{
+  return length;
+}
+
+void sortArray(int flag)
+{
+  if (flag == 0)
+    for (int i = 0; i < 10; i++)
+      
+}
 
 int main()
 
