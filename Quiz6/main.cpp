@@ -2,35 +2,30 @@
 #include "IntegerArray.hpp"
 using namespace std;
 
-
 int main()
-
 {
 
-    IntegerArray N;
+  IntegerArray N;
+  N.fillUp();
+
+  cout << endl;
+  cout << "Original Array: " << endl;
+  N.printAll();
+  cout << endl;
+
+  cout << "Current length is " << N.getLength() << endl;
 
 
-    N.fillUp();
+  cout << "After sorting with ascending order : \n";
+  N.sortArray(0);                   // if 0, ascending
+  N.printAll();
 
-    N.printAll();
+  cout << "After sorting with descending order: \n";
+  N.sortArray(1);                   // if 1, descending
+  N.printAll();
 
-    cout << "Current length is " << N.getLength() << endl;
+  cout << "Number of Prime Numbers: ";
+  N.getPrimenumbers();
 
-
-    cout << "After sorting with ascending order : \n ";
-
-    N.sortArray(0);
-
-    N.printAll();
-
-
-    cout << "After sorting with descending order: \n ";
-
-    N.sortArray(1);
-
-    N.printAll();
-
-
-    cout << "The number of prime numbers " << N.getPrimenumbers() << endl;
 
 }

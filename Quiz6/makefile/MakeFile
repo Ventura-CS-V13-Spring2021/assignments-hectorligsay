@@ -1,6 +1,6 @@
 CC = g++
 CFLAGS = I
-header = IntegerArray.hpp  
+header = IntegerArray.hpp  #//(this is fake fx)   // Dependency 
 
 %.o: %.c $(header)
 	$(CC) -c -o $@ $< $(CFLAGS)
