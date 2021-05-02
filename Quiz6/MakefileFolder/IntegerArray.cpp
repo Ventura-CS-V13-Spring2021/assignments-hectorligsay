@@ -1,11 +1,17 @@
-#include <iostream>
 #include <algorithm>
 #include <cmath>
 #include <iomanip>
 #include <ctime>
 #include "IntegerArray.hpp"
+#include <iostream>
 using namespace std;
 
+
+
+
+int IntegerArray::getLength(void){
+  return length;
+}
 
 void IntegerArray::sortArray(int flag){
     if (flag == 0)
@@ -79,31 +85,4 @@ void IntegerArray::getPrimenumbers(void) const {
           continue;
     }
     cout << count << endl;
-}
-
-
-int main()
-
-{
-
-  IntegerArray N;
-  N.fillUp();
-
-  cout << endl;
-  cout << "Original Array: " << endl;
-  N.printAll();
-  cout << endl;
-
-  cout << "Current length is " << N.getLength() << endl;
-
-
-  cout << "After sorting with ascending order : \n";
-  N.sortArray(0);                   // if 0, ascending
-
-  cout << "After sorting with descending order: \n";
-  N.sortArray(1);                   // if 1, descending
-
-  cout << "Number of Prime Numbers: ";
-  N.getPrimenumbers();
-
 }

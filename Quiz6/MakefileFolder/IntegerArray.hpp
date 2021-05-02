@@ -1,7 +1,6 @@
 #ifndef INTEGERARRAY_H      //if not defined
 #define INTEGERARRAY_H      // defined this keyword
 
-
 class IntegerArray
 {
   private:
@@ -15,9 +14,4 @@ class IntegerArray
     void getPrimenumbers(void) const ;
     void printAll(void) const ;
 };
-
-int IntegerArray::getLength(void){
-  return length;
-}
-
 #endif
