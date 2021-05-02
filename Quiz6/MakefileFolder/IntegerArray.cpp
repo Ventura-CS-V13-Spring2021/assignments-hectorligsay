@@ -18,26 +18,13 @@ void IntegerArray::sortArray(int flag){
     {
       //ascending
       sort(numbers, numbers + length);
-      cout << "Ascending: \n";
       cout << "Sorted Array " << "\t";
-
-      // Finds ascending
-      for (int i = 0; i < length; i ++)
-      {
-        cout << numbers[i] << "\t";
-      } cout << "\n" << endl;
     }
     else 
     {    
       //descending
       sort(numbers, numbers + length,greater<int>());
-      cout << "Descending: \n";
       cout << "Sorted Array " << "\t";
-
-      for (int i = 0; i < length; i ++)
-      {
-          cout << numbers[i] << "\t";
-      } cout << "\n" << endl;
     }
 }
 
@@ -45,7 +32,6 @@ void IntegerArray::fillUp(void)
 {
   srand(time(0));
   //Creates array first 
-
   int size = rand() % 11;
 
   for (int i =0; i < size; i++){
