@@ -30,8 +30,14 @@ void count0cluster(int bin[], int size)
 
   for (int i =0; i < size; i++)
   {
-    if (bin[i] == 0)
-    count ++;
+    if (i == 0)
+      if (bin[i] == 0)
+      count ++;
+    
+    if (bin[i] == 0 && bin[i-1] == 1)
+      count ++;
+    
+    
   }
   cout << "Count of cluster: " << count << endl;
 }
