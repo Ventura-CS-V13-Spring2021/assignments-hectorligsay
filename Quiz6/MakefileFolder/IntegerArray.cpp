@@ -7,8 +7,6 @@
 using namespace std;
 
 
-
-
 int IntegerArray::getLength(void){
   return length;
 }

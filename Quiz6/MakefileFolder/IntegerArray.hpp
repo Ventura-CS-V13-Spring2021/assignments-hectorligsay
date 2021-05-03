@@ -8,7 +8,7 @@ class IntegerArray
     int length = 0 ;
 
   public:
-    int getLength(void);  // gets current length
+    int getLength(void) ;  // gets current length
     void sortArray(int flag); // if flag = 0, ascend else descend
     void fillUp(void);      // fills randnums 0-99
     void getPrimenumbers(void) const ;
