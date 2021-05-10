@@ -6,8 +6,8 @@ private:
     double y;
 
 public:
-    Coordinate();
-    Coordinate(double xval, double yval);
+    Coordinate() : x(0), y(0) {};
+    Coordinate(double xval, double yval) : x(xval), y(yval) {};
     int getX() const;
     int getY() const;
     void setXY(double xval, double yval);

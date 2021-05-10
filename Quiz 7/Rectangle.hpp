@@ -11,8 +11,8 @@ private:
     double area;
 
 public:
-    Rectangle();
-    Rectangle(Coordinate lbval, Coordinate rtval);
+    Rectangle(): lb(0), rt(0) {};
+    Rectangle(Coordinate lbval, Coordinate rtval) : lb(lbval), rt(rtval) {};
     Coordinate getLB() const;
     Coordinate getRT() const;
     double getArea();
