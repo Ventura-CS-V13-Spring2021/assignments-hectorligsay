@@ -16,3 +16,4 @@ void Coordinate::printXY() const{
     cout << "X-val: " << x << "/ Y-val: " << y << endl;
 }
 
+std
