@@ -1,5 +1,6 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
+
 #include "Coordinate.hpp"
 
 class Rectangle
@@ -11,8 +12,8 @@ private:
     double area;
 
 public:
-    Rectangle(): lb(0), rt(0) {};
-    Rectangle(Coordinate lbval, Coordinate rtval) : lb(lbval), rt(rtval) {};
+    Rectangle();
+    Rectangle(Coordinate lbval, Coordinate rtval) ;
     Coordinate getLB() const;
     Coordinate getRT() const;
     double getArea();
@@ -20,3 +21,5 @@ public:
     void setLBRT(Coordinate lbval, Coordinate rtval);
     void printRectangle() const;
 };
+
+#endif

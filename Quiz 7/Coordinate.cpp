@@ -2,6 +2,10 @@
 #include <iostream>
 using namespace std;
 
+//Coordinate::Coordinate() {}
+Coordinate::Coordinate(double xval, double yval) 
+    {setXY(xval,yval);}
+
 int Coordinate::getX() const{
     return x;
 }
