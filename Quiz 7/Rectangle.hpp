@@ -1,6 +1,6 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
-#include "coordinate.hpp"
+#include "Coordinate.hpp"
 
 class Rectangle
 {

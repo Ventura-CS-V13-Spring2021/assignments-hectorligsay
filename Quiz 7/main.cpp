@@ -1,5 +1,5 @@
-#include "rectangle.hpp"
-#include "coordinate.hpp"
+#include "Rectangle.hpp"
+#include "Coordinate.hpp"
 
 int main()
 {
