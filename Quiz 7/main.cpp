@@ -7,7 +7,10 @@ int main()
 {
     Coordinate lbval(0.0, 0.0);
     Coordinate rtval(10.0, 10.0);
+
+
     Rectangle r1(lbval, rtval);
+    // Rectangle r1;
 
     //Print's first rectangle's info
     cout << "FIRST RECTANGLE: " << endl;
@@ -20,4 +23,5 @@ int main()
     rtval.setXY(20.0, 20.0);
     r1.setLBRT(lbval, rtval);
     r1.printRectangle();
+
 }
