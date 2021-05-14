@@ -37,9 +37,10 @@ void integerArray::createArray(void){     //creates array w/ 6 rand elements
 }
 
 void printAll(void) const{
-    for (int i=0; i < length; i++)
-        cout << numbers[i] << "\t";
-        cout << endl;
+    for (int i=0; i < length; i++){
+      cout << numbers[i] << "\t";
+      cout << endl;
+    }
 }
 
 int getNumDiv(int i){      //Gets nums divided
