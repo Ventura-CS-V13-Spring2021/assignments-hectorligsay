@@ -53,6 +53,8 @@ int getNumDiv(int i){      //Gets nums divided
         count ++;
     }
   }
+
+  for (int j, j < i, )
   return count;
 }
 
