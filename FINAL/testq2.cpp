@@ -23,14 +23,14 @@ using namespace std;
 int main()
 {
     const int N=20;
-    int     numbers[N];
+    double     numbers[N];
     float count = 0;
 
     srand(time(0));
     //  CREATES THE ARRAY FIRST
     for(int i=0; i<N; i++)
     {
-        numbers[i] = rand() % 10;
+        numbers[i] = rand() % 41 + (-20);
     }
 
     // print out all elements in array
@@ -40,7 +40,7 @@ int main()
     }
     cout << endl;
 
-    for (int i = 0; i <= N; i++){ 
+    for (int i = 0; i < N; i++){ 
         int f = numbers[i];
       for (int j =0; j < N; j++){
           if ( numbers[i] == numbers[j] ){
