@@ -8,16 +8,17 @@ using namespace std;
 class integerArray{
 
 private: 
-  const int numbers[6];     // initializes array w/ 6 empty spaces
+  const int numbers[6] = {};     // initializes array w/ 6 empty spaces
   int length;               // length value is hidden
 
 public:
-  int getLength(void) const;
+  int getLength(void) ;
   void sortArray(void);
   void createArray(void);
+  void printArray(void);
 };
 
-int IntegerArray::getLength(void) const{
+int integerArray::getLength(void){
   return length;                // returns legth's value from line 35
 }
 
@@ -36,7 +37,7 @@ void integerArray::createArray(void){     //creates array w/ 6 rand elements
   }
 }
 
-void printAll(void) const{
+void integerArray::printArray(void) {
     for (int i=0; i < length; i++){
       cout << numbers[i] << "\t";
       cout << endl;
