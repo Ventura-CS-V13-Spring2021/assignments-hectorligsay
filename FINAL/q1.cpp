@@ -44,15 +44,27 @@ void integerArray::printArray(void) {
     }
 }
 
+
 int getNumDiv(int i){      //Gets nums divided
   int count = 0;            
-  for (int i; i < length; i++)
-  {
-    for (int j=1; j < 50; j++){
-      if (numbers[i] % j == 0)
-        count ++;
-    }
-  }
+  // for (int i; i < length; i++)
+  // {
+  //   for (int j=1; j < 50; j++){
+  //     if (numbers[i] % j == 0)
+  //       count ++;
+  //   }
+  // }
+  for (int i = 0; i < N; i++){ 
+          int f = numbers[i];
+        for (int j =1; j < numbers[i]; j++){
+            if ( numbers[i] % j == 0 ){
+                count ++;
+            }
+        }
+        cout << "COUNT for" << numbers[i] << " is " << count << endl;
+        count = 0;
+      }
+      
   return count;
 }
 
