@@ -40,14 +40,15 @@ int main()
     }
     cout << endl;
 
-    for (int i = 0; i < N; i++)
-    { 
+    for (int i = 0; i < N; i++){ 
+        int f = numbers[i];
       for (int j =1; j < numbers[i]; j++){
           if ( numbers[i] % j == 0 ){
               count ++;
           }
-    }
-    
+      }
+      cout << "COUNT for" << numbers[i] << " is " << count << endl;
+      count = 0;
     }
     
 }
