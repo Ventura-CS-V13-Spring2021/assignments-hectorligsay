@@ -1,0 +1,68 @@
+ELABORATION:
+Program Design:
+  We have 4 files: the header file, .cpp file, main file, and makefile. The header profile provides a rough overview of what the functions in the Student class will do minus all the details on how to do the function. 
+  
+student.hpp:---------------
+  Line 12: We implement the pointer to class_list so we can access the values from the class_list address. 
+  
+  Line 15: We create a constructor for Student() to initialize variables name, num_classes, and class_list
+
+  Line 16: We create two variables n and num for arguments.
+
+  Line 17: Copy constructor is created. We use &rhs to refer to the value of the object implemented here.
+
+  Line 18: Destructor is initialized with the "~" 
+
+  Line 20: Gets data from user
+
+  Line 21: Resets all the information from input using the Destructor
+
+  Line 22: Prints everything 
+
+  Line 23 & 24: Manipulators to get Name and num_classes
+
+  Some of these are set to constant because we don't want those values to be changed once they are set.
+
+.cpp file-----------------------------
+  Line 3: We use #include "student.hpp" to get the date from .hpp file
+
+  Line 8-9: &rhs allows us to grab data from object and sets them to num_classes & name.
+
+  Line 13: Deletes all values in class_list
+
+  Line 18-24: Uses the overloading assignment operator. &rhs copies data from the object and sets the data to num_classes and name. The new num_classes data will be set to class_list. A for loop is created to copy these values into the new class list one by one. We use the pointer *this to get that data and copy it to the LEFT side of the "=" sign. I honestly don't know why it doesn't work correct when we take *this out. I assume it's because it didn't copy the data into anything? 
+
+  Line 27-35: We ask the user for the name, and number of classes. Again we use the num_classes value to be assigned to the class_list variable in order to set how many elements will be stored within that array. Using a for-loop, we are able to keep "Class name" the same and change the value of i to match what number class this is. The reason why we do (i+1) is so we can start the value at 1 because starting it like "Class name 0:" makes no sense. Using cin, we use a pointer to get the user input value into the array starting at the first index. 
+
+  Lines 40-42: We reset the data to "reset" themselves and empty the values in them. 
+
+  Lines 47-53: Prints the name and number of classes. We use a for-loop to print the values of each class_list index by using a pointer to point to the address of class_list by using i which will point to the value.
+
+  Line 57 & line 61: Returns the values of name and num_classes
+
+main.cpp-----------------------------
+  Again we make sure we include student.hpp file or else we aren't able to grab any of the class data and use the program properly. 
+
+  Line 8: Creates two objects, stud (for student) and stud_copy.
+
+  Line 13: Asks the user for the input
+
+  Line 19: Prints user input
+
+  Line 22: Copies values from stud into student copy with overloading assignment operator function
+
+  Line 25: Shows that stud_copy now has the data from student
+
+  Line 27: Resets the data. Make sure you put the object in front of it.
+
+  Line 30: Shows that everything in stud has been deleted. 
+
+
+Debugging Experience:
+Again I have ran through many syntax errors, and I think I'm getting more comfortable with not getting everything correctly and struggling through this. Small mistakes were made because I get frustrated too easily or I'm thinking too hard. Once I come back with a clear mind, I find (some) of the small mistakes. 
+
+The overloading assignment operator confused me until I went over the powerpiont and found the time to go to tutoring. Sometimes I still don't understand where to put & or * in the correct places to get the values, or how to implement the classes correctly by using the "::". Google did help a lot with understanding the bits and pieces of this code. 
+
+Pointers and Reference variables are a whole new world, and I still need to go over those a lot. After reading through the powerpoint on pointers, it finally clicked on how *(class_list + i) is the same thing as class_list[i]. From there I changed what I had to try and practice using those pointers until they worked. 
+
+The destructor I had to play around with for awhile. I put delete[] class_list in the destructor or in the resetClass function to see why it works in one and not the other. Sometimes I waste a lot of time doing that, but I want to know what makes it work, and whats a better way to make it work.
