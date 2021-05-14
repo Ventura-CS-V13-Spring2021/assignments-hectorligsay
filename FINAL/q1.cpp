@@ -9,12 +9,11 @@ class integerArray{
 
 private: 
   int numbers[6] = {};     // initializes array w/ 6 empty spaces
-  int length;               // length value is hidden
+  int length = 0;               // length value is hidden
 public:
-  integerArray() :  length(0) {};
   int getLength(void) ;     
   void sortArray(void); 
-  int createArray(int);
+  void createArray(void);
   void printArray(void);
   int getNumDiv(int);
   // int getMaxAndVal(int);
@@ -32,9 +31,9 @@ void integerArray::sortArray(void){
 
 
 //  CREATES ARRAY W/ 6 RANDOM VALUES
-int integerArray::createArray(int){     
-  int size = 6;
+void integerArray::createArray(void){     
   srand(time(0));     //initializes randoms 
+  int size = 6;
 
   for (int i=0; i< size; i++){  
     numbers[i] = rand() % 100;
