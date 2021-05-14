@@ -69,7 +69,7 @@ int main()
     }
     cout << endl;
 
-  // findmax
+  // find min/max
   int    max, maxidx = 0;
 
   max = newarray[0];
