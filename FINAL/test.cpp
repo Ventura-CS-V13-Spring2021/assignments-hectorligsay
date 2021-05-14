@@ -42,14 +42,12 @@ int main()
 
     for (int i = 0; i < N; i++)
     { 
-    int f = numbers[i];
-    for (int j =0; j < f; j++){
-        int l = f % j;
-        if ( l == 0 ){
-            count ++;
-        }
-        cout << "COUNT" << count << endl;
+      for (int j =1; j < numbers[i]; j++){
+          if ( numbers[i] % j == 0 ){
+              count ++;
+          }
     }
+    
     }
     
 }

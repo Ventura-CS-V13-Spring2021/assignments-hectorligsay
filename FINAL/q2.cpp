@@ -36,7 +36,7 @@ void integerArray::createArray(void){     //creates array w/ 6 rand elements
 
 void integerArray::printArray(void) {
     for (int i=0; i < length; i++){
-      cout << numbers[i] << "\t";
+      cout << *(numbers+i) << "\t";
       cout << endl;
     }
 }
@@ -45,9 +45,9 @@ int main(){
   integerArray arr1;
 
   arr1.printArray();
-  arr1.sortArray();
+  // arr1.sortArray();
 
-  // sorted
-  arr1.printArray();
+  // // sorted
+  // arr1.printArray();
 
 }
