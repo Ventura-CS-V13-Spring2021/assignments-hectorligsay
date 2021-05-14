@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-#include<algorithm>
+#include <algorithm>
 #include <ctime>
 #include <cstdlib>
 using namespace std;
@@ -18,7 +18,7 @@ public:
 };
 
 int IntegerArray::getLength(void) const{
-    return length;                // returns legth's value from line 35
+  return length;                // returns legth's value from line 35
 }
 
 void integerArray::sortArray(void){       //ASCENDS
@@ -39,7 +39,7 @@ void integerArray::createArray(void){     //creates array w/ 6 rand elements
 void printAll(void) const{
     for (int i=0; i < length; i++)
         cout << numbers[i] << "\t";
-    cout << endl;
+        cout << endl;
 }
 
 int getNumDiv(int i){      //Gets nums divided
@@ -54,9 +54,6 @@ int getNumDiv(int i){      //Gets nums divided
   return count;
 }
 
-void findGreatestvalue(void){
-  
-}
 
 int main(){
   
