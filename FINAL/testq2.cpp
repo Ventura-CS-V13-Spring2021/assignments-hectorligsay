@@ -22,11 +22,13 @@ using namespace std;
 
 int main()
 {
-    const int N=20;
+    int N=0;
     double     numbers[N];
     float count = 0;
 
     srand(time(0));
+    N = rand() % 20;
+
     //  CREATES THE ARRAY FIRST
     for(int i=0; i<N; i++)
     {
