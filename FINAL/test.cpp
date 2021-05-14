@@ -23,7 +23,7 @@ using namespace std;
 int main()
 {
     const int N=6;
-    int     numbers[N];
+    int     numbers[N], newarray[N];
     float count = 0;
 
     srand(time(0));
@@ -40,6 +40,16 @@ int main()
     }
     cout << endl;
 
+    //SORTS ARRAY
+    sort(numbers, numbers + N);
+    for(int i=0; i<N; i++)
+    {
+      cout << numbers[i] << "\t" ;
+    }
+    cout << endl;
+
+
+    // FINDS NUMBERS DIVISIBLE
     for (int i = 0; i < N; i++){ 
         int f = numbers[i];
       for (int j =1; j < numbers[i]; j++){
@@ -47,8 +57,35 @@ int main()
               count ++;
           }
       }
-      cout << "COUNT for" << numbers[i] << " is " << count << endl;
-      count = 0;
+      cout << "COUNT for " << numbers[i] << " is " << count << endl;
+      newarray[i] = count;    // Assigns count to new array
+
+      count = 0;            //resets the count for the next number
     }
-    
+    // print out all elements in array
+    for(int i=0; i<N; i++)
+    {
+        cout << newarray[i] << "\t" ;
+    }
+    cout << endl;
+
+  // find min/max
+  int    max, maxidx = 0;
+
+  max = newarray[0];
+  for (int i = 0; i<N; i++){
+    if (max < newarray[i]){
+      maxidx = i;
+      max = newarray[i];
+    }
+  }
+
+  cout << "MAX : " << max << endl;
+
+  // returns the index of max value
+  for (int i = 0; i<N; i++){
+    if (newarray[i] == max){
+      cout << numbers[i] << endl;
+    }
+  }
 }

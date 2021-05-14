@@ -22,36 +22,36 @@ using namespace std;
 
 int main()
 {
-    int N=0;
-    double     numbers[N];
-    float count = 0;
 
-    srand(time(0));
-    N = rand() % 20;
+  srand(time(NULL));
+  int N = rand() % 20;
+  double     numbers[N];
+  float count = 0;
 
-    //  CREATES THE ARRAY FIRST
-    for(int i=0; i<N; i++)
-    {
-        numbers[i] = rand() % 41 + (-20);
+
+  //  CREATES THE ARRAY FIRST
+  for(int i=0; i<N; i++)
+  {
+      numbers[i] = rand() % 41 + (-20);
+  }
+
+  // print out all elements in array
+  for(int i=0; i<N; i++)
+  {
+      cout << numbers[i] << "\t" ;
+  }
+  cout << endl;
+
+  for (int i = 0; i < N; i++){ 
+      int f = numbers[i];
+    for (int j =0; j < N; j++){
+        if ( numbers[i] == numbers[j] ){
+            count ++;
+            continue;
+        }
     }
-
-    // print out all elements in array
-    for(int i=0; i<N; i++)
-    {
-        cout << numbers[i] << "\t" ;
-    }
-    cout << endl;
-
-    for (int i = 0; i < N; i++){ 
-        int f = numbers[i];
-      for (int j =0; j < N; j++){
-          if ( numbers[i] == numbers[j] ){
-              count ++;
-              continue;
-          }
-      }
-      cout << "COUNT for " << numbers[i] << " is " << count << endl;
-      count = 0;
-    }
-    
+    cout << "COUNT for " << numbers[i] << " is " << count << endl;
+    count = 0;
+  }
+  
 }

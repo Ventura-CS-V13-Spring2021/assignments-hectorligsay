@@ -54,21 +54,27 @@ int getNumDiv(int i){      //Gets nums divided
   //       count ++;
   //   }
   // }
-  for (int i = 0; i < N; i++){ 
-          int f = numbers[i];
-        for (int j =1; j < numbers[i]; j++){
-            if ( numbers[i] % j == 0 ){
-                count ++;
-            }
-        }
-        cout << "COUNT for" << numbers[i] << " is " << count << endl;
-        count = 0;
+  for (int i = 0; i < length; i++){ 
+    int f = numbers[i];
+
+    for (int j =1; j < numbers[i]; j++){
+      if ( numbers[i] % j == 0 ){
+        count ++;
       }
+    }
+    cout << "COUNT for" << numbers[i] << " is " << count << endl;
+    count = 0;
+  }
       
   return count;
 }
 
 
 int main(){
-  
+  integerArray a1;
+
+  a1.createArray();
+  a1.sortArray();
+
+
 }
