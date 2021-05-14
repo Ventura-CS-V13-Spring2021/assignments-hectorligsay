@@ -8,8 +8,8 @@ using namespace std;
 class integerArray{
 
 private: 
-  int numbers[6];
-  int length;
+  const int numbers[6];     // initializes array w/ 6 empty spaces
+  int length;               // length value is hidden
 
 public:
   int getLength(void) const;
@@ -18,19 +18,21 @@ public:
 };
 
 int IntegerArray::getLength(void) const{
-    return length;
+    return length;                // returns legth's value from line 35
 }
 
-void sortArray(void){       //ASCENDS
+void integerArray::sortArray(void){       //ASCENDS
   //To ascend the order
   sort(numbers, numbers + length);
 }
 
 void integerArray::createArray(void){     //creates array w/ 6 rand elements
+  
   srand(time(0));     //initializes randoms 
+
   for (int i=0; i< length; i++){  
     numbers[i] = rand() % 100;
-    length++;
+    length++;                     // gets length value
   }
 }
 
@@ -40,8 +42,16 @@ void printAll(void) const{
     cout << endl;
 }
 
-int getNumDiv(int i){                 //Gets nums divided
-
+int getNumDiv(int i){      //Gets nums divided
+  int count = 0;            
+  for (int i; i < length; i++)
+  {
+    for (int j; j < 50; j++){
+      if (numbers[i] % j == 0)
+        count ++;
+    }
+  }
+  return count;
 }
 
 int main(){
