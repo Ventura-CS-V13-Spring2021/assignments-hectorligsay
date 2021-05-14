@@ -15,7 +15,7 @@ public:
   void sortArray(void); 
   void createArray(void);
   void printArray(void);
-  int getNumDiv(int);
+  int getNumDiv(void);
   // int getMaxAndVal(int);
 };
 
@@ -45,45 +45,46 @@ void integerArray::createArray(void){
 void integerArray::printArray(void) {
     for (int i=0; i < length; i++){
       cout << numbers[i] << "\t";
-      cout << endl;
     }
+    cout << endl;
 }
 
 //    FINDS NUMBERS DIVISIBLE
-int integerArray::getNumDiv(int){     
+int integerArray::getNumDiv(void){     
   int count = 0;
   int newArray[length];
 
   for (int i = 0; i < length; i++){ 
         int f = numbers[i];
       for (int j =1; j < numbers[i]; j++){
-          if ( numbers[i] % j == 0 ){
+          if ( (numbers[i] % j == 0) && !(numbers[i] / j == numbers[i]) 
+                && !(numbers[i] / j == 1)){
               count ++;
           }
       }
-      cout << "COUNT for " << numbers[i] << " is " << count << endl;
+      cout << "Factors of " << numbers[i] << ": " << count << endl;
       newArray[i] = count;    // Assigns count to new array
     
       count = 0;            //resets the count for the next number
     }
 
-  //      GETS THE MAX  w/ VALUE
-  int maxidx = 0;
-  int max = newArray[0];
+  // //      GETS THE MAX  w/ VALUE
+  // int maxidx = 0;
+  // int max = newArray[0];
   
-  for (int i = 0; i<length; i++){
-    if (max < newArray[i])  {
-      maxidx = i;
-      max = newArray[i];
-    }
-  }
+  // for (int i = 0; i<length; i++){
+  //   if (max < newArray[i])  {
+  //     maxidx = i;
+  //     max = newArray[i];
+  //   }
+  // }
 
-        // GETS VALUE OF MAX
-  for (int i = 0; i<length; i++){
-    if (newArray[i] == max){
-      cout << numbers[i] << endl;
-    }
-  }
+  //       // GETS VALUE OF MAX
+  // for (int i = 0; i<length; i++){
+  //   if (newArray[i] == max){
+  //     cout << numbers[i] << endl;
+  //   }
+  // }
   
 }
 
@@ -111,9 +112,20 @@ int integerArray::getNumDiv(int){
 int main(){
   integerArray a1;
 
+  // Creates array and prints original
+  cout << "ORIGINAL ARRAY: \t\t\n";
   a1.createArray();
+  a1.printArray();
+ 
+
+  // Sorts in ascending order and prints that order
+  cout << "SORTED ARRAY: \t\t\n";
   a1.sortArray();
   a1.printArray();
+
+  //Gets the factors of each number in array
+  cout << "\nFACTORS OF EACH NUMBER IN ARRAY: \n";
+  a1.getNumDiv();
 
 
 }
