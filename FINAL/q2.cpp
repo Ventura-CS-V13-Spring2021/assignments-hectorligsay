@@ -21,10 +21,14 @@ int integerArray::getLength(void) {
   return length;                
 }
 
+void integerArray::sortArray(void){       //ASCENDS
+  //To ascend the order
+  sort(numbers, numbers + length);
+}
+
 void integerArray::createArray(void){     //creates array w/ 6 rand elements
   
   srand(time(0));     //initializes randoms 
-
   for (int i=0; i< length; i++){  
     numbers[i] = rand() % 100;
     length++;                     // gets length value
@@ -44,6 +48,7 @@ int main(){
   arr1.printArray();
   arr1.sortArray();
 
+  // sorted
   arr1.printArray();
 
 }
