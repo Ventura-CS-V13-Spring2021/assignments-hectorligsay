@@ -54,6 +54,10 @@ int getNumDiv(int i){      //Gets nums divided
   return count;
 }
 
+void findGreatestvalue(void){
+  
+}
+
 int main(){
   
 }
