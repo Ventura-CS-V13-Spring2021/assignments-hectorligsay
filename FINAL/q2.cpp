@@ -27,7 +27,6 @@ void integerArray::sortArray(void){       //ASCENDS
 }
 
 void integerArray::createArray(void){     //creates array w/ 6 rand elements
-
   srand(time(0));     //initializes randoms 
   for (int i=0; i< length; i++){  
     numbers[i] = rand() % 100;

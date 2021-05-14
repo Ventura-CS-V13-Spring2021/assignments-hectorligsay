@@ -62,3 +62,4 @@ int getNumDiv(int i){      //Gets nums divided
 int main(){
   
 }
+ 
