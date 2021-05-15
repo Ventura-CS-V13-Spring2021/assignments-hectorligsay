@@ -2,6 +2,7 @@
 #include <cmath>
 #include <algorithm>
 #include <ctime>
+#include <iomanip>
 #include <cstdlib>
 using namespace std;
 
@@ -105,18 +106,21 @@ int integerArray::getNumDiv(void){
 //      GETS THE MAX  w/ VALUE
 int integerArray::getMaxAndVal(void){
   int maxidx = 0;
-  int max = *newArray;
+  int max = newArray[0];
+
+  //Gets the MAX value of the factors 
   for (int i = 0; i<length; i++){
-    if (max < *(newArray+i)) {
+    if (max < newArray[i]) {
       maxidx = i;
-      max = *(newArray+i);
+      max = newArray[i];
     }
+    
   }
 
-        // GETS VALUE OF MAX
+  // GETS VALUE OF MAX value
   for (int i = 0; i<length; i++){
-    if ( *(newArray+i) == max){
-      cout << *numbers << endl;
+    if ( newArray[i] == max){
+      cout << numbers[i] << endl;
     }
   }
 }

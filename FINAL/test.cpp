@@ -6,20 +6,6 @@
 #include <iostream>
 using namespace std;
 
-// int getNumDiv(int i){      //Gets nums divided
-//   int count = 0;            
-//   for (int i; i < length; i++)
-//   {
-//     for (int j; j < 50; j++){
-//       if (numbers[i] % j == 0)
-//         count ++;
-//     }
-//   }
-
-//   for (int j, j < i, )
-//   return count;
-// }
-
 int main()
 {
     const int N=6;
