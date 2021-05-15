@@ -10,14 +10,27 @@ class integerArray{
 private: 
   int numbers[6] = {};     // initializes array w/ 6 empty spaces
   int length = 0;               // length value is hidden
+  int newArray[6] = {};
 public:
+  int getNumbers(int);
+  int getnewArray(int);
   int getLength(void) ;     
   void sortArray(void); 
   void createArray(void);
   void printArray(void);
   int getNumDiv(void);
-  // int getMaxAndVal(int);
+  int getMaxAndVal(void);
 };
+
+int integerArray::getNumbers(int){
+  return *numbers;
+}
+
+
+int integerArray::getnewArray(int){
+  return *newArray;
+}
+
 
 //    RETURNS LENGTH VALUE FROM LINE 42
 int integerArray::getLength(void){
@@ -67,7 +80,7 @@ int integerArray::getNumDiv(void){
     
       count = 0;            //resets the count for the next number
     }
-
+  cout << endl;
   // //      GETS THE MAX  w/ VALUE
   // int maxidx = 0;
   // int max = newArray[0];
@@ -89,24 +102,24 @@ int integerArray::getNumDiv(void){
 }
 
 
-// //      GETS THE MAX  w/ VALUE
-// int integerArray::getMaxAndVal(int){
-//   int maxidx = 0;
-//   int max = newArray[0];
-//   for (int i = 0; i<length; i++){
-//     if (max < newArray[i])  {
-//       maxidx = i;
-//       max = newArray[i];
-//     }
-//   }
+//      GETS THE MAX  w/ VALUE
+int integerArray::getMaxAndVal(void){
+  int maxidx = 0;
+  int max = newArray[0];
+  for (int i = 0; i<length; i++){
+    if (max < newArray[i])  {
+      maxidx = i;
+      max = newArray[i];
+    }
+  }
 
-//         // GETS VALUE OF MAX
-//   for (int i = 0; i<length; i++){
-//     if (newArray[i] == max){
-//       cout << numbers[i] << endl;
-//     }
-//   }
-// }
+        // GETS VALUE OF MAX
+  for (int i = 0; i<length; i++){
+    if (newArray[i] == max){
+      cout << numbers[i] << endl;
+    }
+  }
+}
 
 
 int main(){
@@ -123,9 +136,12 @@ int main(){
   a1.sortArray();
   a1.printArray();
 
-  //Gets the factors of each number in array
+  // Gets the factors of each number in array
   cout << "\nFACTORS OF EACH NUMBER IN ARRAY: \n";
   a1.getNumDiv();
 
+  // Gets the number with the highest factors
+  cout << "Number(s) with the highest factors: \n";
+  a1.getMaxAndVal;
 
 }
