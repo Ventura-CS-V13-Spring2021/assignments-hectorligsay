@@ -10,14 +10,31 @@ class integerArray{
 
 private: 
   int numbers[6] = {};     // initializes array w/ 6 empty spaces
+  int length = 0;               // length value is hidden
   int newArray[6] = {};
-public:  
+public:
+  int getNumbers(int);
+  int getnewArray(int);  
+  int getLength(void) ;     
   void sortArray(void); 
   void createArray(void);
   void printArray(void);
   int getNumDiv(void);
 
 };
+
+int integerArray::getNumbers(int){
+  return *numbers;
+}
+
+int integerArray::getnewArray(int){
+  return *newArray;
+}
+
+//    RETURNS LENGTH VALUE FROM LINE 42
+int integerArray::getLength(void){
+  return length;                
+}
 
 //      SORT IN ASCENDING ORDER
 void integerArray::sortArray(void){       

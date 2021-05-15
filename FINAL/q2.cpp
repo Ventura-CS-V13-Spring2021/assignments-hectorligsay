@@ -4,22 +4,23 @@
 #include <ctime>
 #include <iomanip>
 #include <cstdlib>
+#include <bits/stdc++.h>
 using namespace std;
 
 class integerArray{
 
 private: 
-  int numbers[N] = {};     // initializes array w/ 6 empty spaces
-  int newArray[N] = {};
-  int length = 0;            
-
+  int numbers[19] = {};     // initializes array w/ 19 empty spaces
+  int length = 0;               // length value is hidden
+  int newArray[19] = {};
 public:
+  int getNumbers(int);
   int getnewArray(int);  
   int getLength(void) ;     
-  void sortArray(void);  // To Descend
+  void sortArray(void); 
   void createArray(void);
   void printArray(void);
-  int getOccurences(void);
+  int getCount(void);
 
 };
 
@@ -36,19 +37,19 @@ int integerArray::getLength(void){
   return length;                
 }
 
-//      SORT IN ASCENDING ORDER
+//      SORT IN DESCENDING ORDER
 void integerArray::sortArray(void){       
-  sort(numbers, numbers + length);
+  sort(numbers, numbers + length, greater<int>());
 }
 
 
 //  CREATES ARRAY W/ 6 RANDOM VALUES
 void integerArray::createArray(void){     
   srand(time(0));     //initializes randoms 
-  int size = 6;
+  int size = rand() % 20;
 
   for (int i=0; i< size; i++){  
-    numbers[i] = rand() % 41 + (-20;
+    numbers[i] = rand() % 41 + (-20);
     length++;                     // gets LENGTH value
   }
 }
@@ -61,31 +62,22 @@ void integerArray::printArray(void) {
     cout << endl;
 }
 
-//    FINDS OCCURENCES
-int integerArray::getOccurences(void){     
+// GETS COUNT OF NUMBERS 
+int integerArray::getCount(void){     
   int count = 0;
-  int newArray[length];
-
+  cout << "N" << "\t" << "Count" << endl;
   for (int i = 0; i < length; i++){ 
-    for (int j =1; j < numbers[i]; j++){
-        if ( (numbers[i] == j){
-          count ++;
+      int f = numbers[i];
+    for (int j =0; j < length; j++){
+        if ( numbers[i] == numbers[j] ){
+            count ++;
+            continue;
         }
     }
-      cout << "Factors of " << numbers[i] << ": " << count << endl;
-      newArray[i] = count;    // Assigns count to new array
-    
-      count = 0;            //resets the count for the next number
-    }
-
-    
-}
-
-
-//      GETS THE MAX  w/ VALUE
-int integerArray::getMax(void){
-  return max;
-  //cout << "Max is" << max << endl;
+    cout << numbers[i] << "\t" << count << endl;
+    count = 0;
+  }
+  cout << endl;
 }
 
 
@@ -105,6 +97,6 @@ int main(){
 
   // Gets the factors of each number in array
   cout << "\nFACTORS OF EACH NUMBER IN ARRAY: \n";
-  a1.getOccurences();
+  a1.getCount();
 
 }

@@ -41,7 +41,8 @@ int main()
       cout << numbers[i] << "\t" ;
   }
   cout << endl;
-
+  
+  cout << "N" << "\t" << "Count" << endl;
   for (int i = 0; i < N; i++){ 
       int f = numbers[i];
     for (int j =0; j < N; j++){
@@ -50,7 +51,8 @@ int main()
             continue;
         }
     }
-    cout << "COUNT for " << numbers[i] << " is " << count << endl;
+    
+    cout << numbers[i] << "\t" << count << endl;
     count = 0;
   }
   
