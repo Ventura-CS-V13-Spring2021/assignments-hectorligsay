@@ -57,10 +57,13 @@ void integerArray::printArray(void) {
     cout << endl;
 }
 
+
 // GETS COUNT OF NUMBERS 
 int integerArray::getCount(void){     
   int count = 0;
+
   cout << "N" << "\t" << "Count" << endl;
+
   for (int i = 0; i < length; i++){ 
       int f = numbers[i];
     for (int j =0; j < length; j++){
