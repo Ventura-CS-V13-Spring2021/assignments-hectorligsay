@@ -10,33 +10,14 @@ class integerArray{
 
 private: 
   int numbers[6] = {};     // initializes array w/ 6 empty spaces
-  int length = 0;               // length value is hidden
   int newArray[6] = {};
-  int max = 0;
-public:
-  int getMax(void);
-  int getNumbers(int);
-  int getnewArray(int);  
-  int getLength(void) ;     
+public:  
   void sortArray(void); 
   void createArray(void);
   void printArray(void);
   int getNumDiv(void);
 
 };
-
-int integerArray::getNumbers(int){
-  return *numbers;
-}
-
-int integerArray::getnewArray(int){
-  return *newArray;
-}
-
-//    RETURNS LENGTH VALUE FROM LINE 42
-int integerArray::getLength(void){
-  return length;                
-}
 
 //      SORT IN ASCENDING ORDER
 void integerArray::sortArray(void){       
@@ -63,13 +44,14 @@ void integerArray::printArray(void) {
     cout << endl;
 }
 
-//    FINDS NUMBERS DIVISIBLE except by itself
+//    FINDS NUMBERS DIVISIBLE (except by itself)
+//    Finds max value of Factors
+//    Prints out the number or numbers w/ highest factors
 int integerArray::getNumDiv(void){     
   int count = 0;
   int newArray[length];
 
   for (int i = 0; i < length; i++){ 
-        int f = numbers[i];
       for (int j =1; j < numbers[i]; j++){
           if ( (numbers[i] % j == 0) && !(numbers[i] / j == 1)){
               count ++;
@@ -102,7 +84,7 @@ int integerArray::getNumDiv(void){
       max = newArray[i];
     }
   }
-  cout << "MAX number of factors IS : " << max << endl;
+  cout << "MAX number of factors is: " << max << endl;
 
 
   //GETS VALUE OF MAX value
@@ -112,13 +94,6 @@ int integerArray::getNumDiv(void){
       cout << numbers[i] << endl;
     }
   }
-}
-
-
-//      GETS THE MAX  w/ VALUE
-int integerArray::getMax(void){
-  return max;
-  //cout << "Max is" << max << endl;
 }
 
 
