@@ -12,10 +12,8 @@ class integerArray{
 private: 
   int numbers[19] = {};     // initializes array w/ 19 empty spaces
   int length = 0;               // length value is hidden
-  int newArray[19] = {};
 public:
   int getNumbers(int);
-  int getnewArray(int);  
   int getLength(void) ;     
   void sortArray(void); 
   void createArray(void);
@@ -24,12 +22,9 @@ public:
 
 };
 
+//    Returns Array 
 int integerArray::getNumbers(int){
   return *numbers;
-}
-
-int integerArray::getnewArray(int){
-  return *newArray;
 }
 
 //    RETURNS LENGTH VALUE FROM LINE 42
@@ -43,7 +38,7 @@ void integerArray::sortArray(void){
 }
 
 
-//  CREATES ARRAY W/ 6 RANDOM VALUES
+//  Creates array w/ random elements and random array size
 void integerArray::createArray(void){     
   srand(time(0));     //initializes randoms 
   int size = rand() % 20;
@@ -80,7 +75,6 @@ int integerArray::getCount(void){
   cout << endl;
 }
 
-
 int main(){
   integerArray a1, a2;
 
@@ -89,14 +83,13 @@ int main(){
   a1.createArray();
   a1.printArray();
  
-
-  // Sorts in ascending order and prints that order
-  cout << "SORTED ARRAY: \t\t\n";
+  // Sorts in descending order and prints that order
+  cout << "DESCENDING ARRAY: \t\t\n";
   a1.sortArray();
   a1.printArray();
 
-  // Gets the factors of each number in array
-  cout << "\nFACTORS OF EACH NUMBER IN ARRAY: \n";
+  // Gets occurences of values in array
+  cout << "\nGETS ARRAY COUNTS: \n";
   a1.getCount();
 
 }
