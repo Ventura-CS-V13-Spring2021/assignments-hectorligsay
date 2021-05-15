@@ -12,26 +12,26 @@ private:
   int numbers[6] = {};     // initializes array w/ 6 empty spaces
   int length = 0;               // length value is hidden
   int newArray[6] = {};
+  int max = 0;
 public:
+  int getMax(void);
   int getNumbers(int);
-  int getnewArray(int);
+  int getnewArray(int);  
   int getLength(void) ;     
   void sortArray(void); 
   void createArray(void);
   void printArray(void);
   int getNumDiv(void);
-  int getMaxAndVal(void);
+
 };
 
 int integerArray::getNumbers(int){
   return *numbers;
 }
 
-
 int integerArray::getnewArray(int){
   return *newArray;
 }
-
 
 //    RETURNS LENGTH VALUE FROM LINE 42
 int integerArray::getLength(void){
@@ -63,7 +63,7 @@ void integerArray::printArray(void) {
     cout << endl;
 }
 
-//    FINDS NUMBERS DIVISIBLE
+//    FINDS NUMBERS DIVISIBLE except by itself
 int integerArray::getNumDiv(void){     
   int count = 0;
   int newArray[length];
@@ -71,8 +71,7 @@ int integerArray::getNumDiv(void){
   for (int i = 0; i < length; i++){ 
         int f = numbers[i];
       for (int j =1; j < numbers[i]; j++){
-          if ( (numbers[i] % j == 0) && !(numbers[i] / j == numbers[i]) 
-                && !(numbers[i] / j == 1)){
+          if ( (numbers[i] % j == 0) && !(numbers[i] / j == 1)){
               count ++;
           }
       }
@@ -81,32 +80,20 @@ int integerArray::getNumDiv(void){
     
       count = 0;            //resets the count for the next number
     }
+
+    
   cout << endl;
-  // //      GETS THE MAX  w/ VALUE
-  // int maxidx = 0;
-  // int max = newArray[0];
-  
-  // for (int i = 0; i<length; i++){
-  //   if (max < newArray[i])  {
-  //     maxidx = i;
-  //     max = newArray[i];
-  //   }
-  // }
-
-  //       // GETS VALUE OF MAX
-  // for (int i = 0; i<length; i++){
-  //   if (newArray[i] == max){
-  //     cout << numbers[i] << endl;
-  //   }
-  // }
-  
-}
-
-
-//      GETS THE MAX  w/ VALUE
-int integerArray::getMaxAndVal(void){
+ 
   int maxidx = 0;
   int max = newArray[0];
+
+  // cout << "NEW ARRAY : " << endl;
+  // for(int i=0; i<length; i++)
+  // {
+  //   cout << newArray[i] << "\t" ;
+  // }
+  // cout << endl;
+  
 
   //Gets the MAX value of the factors 
   for (int i = 0; i<length; i++){
@@ -114,10 +101,12 @@ int integerArray::getMaxAndVal(void){
       maxidx = i;
       max = newArray[i];
     }
-    
   }
+  cout << "MAX number of factors IS : " << max << endl;
 
-  // GETS VALUE OF MAX value
+
+  //GETS VALUE OF MAX value
+  cout << "Numbers(s) with the highest factors: " << endl;
   for (int i = 0; i<length; i++){
     if ( newArray[i] == max){
       cout << numbers[i] << endl;
@@ -126,8 +115,15 @@ int integerArray::getMaxAndVal(void){
 }
 
 
+//      GETS THE MAX  w/ VALUE
+int integerArray::getMax(void){
+  return max;
+  //cout << "Max is" << max << endl;
+}
+
+
 int main(){
-  integerArray a1;
+  integerArray a1, a2;
 
   // Creates array and prints original
   cout << "ORIGINAL ARRAY: \t\t\n";
@@ -143,9 +139,5 @@ int main(){
   // Gets the factors of each number in array
   cout << "\nFACTORS OF EACH NUMBER IN ARRAY: \n";
   a1.getNumDiv();
-
-  // Gets the number with the highest factors
-  cout << "Number(s) with the highest factors: \n";
-  a1.getMaxAndVal();
 
 }

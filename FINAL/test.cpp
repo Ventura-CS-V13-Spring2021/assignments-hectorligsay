@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
     const int N=6;
-    int     numbers[N], newarray[N];
+    int     numbers[N], newArray[N];
     float count = 0;
 
     srand(time(0));
@@ -39,30 +39,32 @@ int main()
     for (int i = 0; i < N; i++){ 
         int f = numbers[i];
       for (int j =1; j < numbers[i]; j++){
-          if ( numbers[i] % j == 0 ){
+          if ( (numbers[i] % j == 0) && !(numbers[i] / j == 1)){
               count ++;
           }
       }
+
+      
       cout << "COUNT for " << numbers[i] << " is " << count << endl;
-      newarray[i] = count;    // Assigns count to new array
+      newArray[i] = count;    // Assigns count to new array
 
       count = 0;            //resets the count for the next number
     }
     // print out all elements in array
     for(int i=0; i<N; i++)
     {
-        cout << newarray[i] << "\t" ;
+        cout << newArray[i] << "\t" ;
     }
     cout << endl;
 
   // findmax
   int    max, maxidx = 0;
 
-  max = newarray[0];
+  max = newArray[0];
   for (int i = 0; i<N; i++){
-    if (max < newarray[i]){
+    if (max < newArray[i]){
       maxidx = i;
-      max = newarray[i];
+      max = newArray[i];
     }
   }
 
@@ -70,8 +72,9 @@ int main()
 
   // returns the index of max value
   for (int i = 0; i<N; i++){
-    if (newarray[i] == max){
+    if (newArray[i] == max) {
       cout << numbers[i] << endl;
     }
   }
 }
+
