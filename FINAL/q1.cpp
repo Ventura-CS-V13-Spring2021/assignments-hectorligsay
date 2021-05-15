@@ -19,7 +19,7 @@ public:
   void createArray(void);
   void printArray(void);
   int getNumDiv(void);
-  int getMaxAndVal(void);
+  void getMaxAndVal(integerArray &ref);
 };
 
 int integerArray::getNumbers(int){
@@ -103,19 +103,21 @@ int integerArray::getNumDiv(void){
 
 
 //      GETS THE MAX  w/ VALUE
-int integerArray::getMaxAndVal(void){
+void integerArray::getMaxAndVal(integerArray &ref){
   int maxidx = 0;
-  int max = newArray[0];
+  int max = ref.newArray[0];
+  newArray = ref.newArray;
   for (int i = 0; i<length; i++){
-    if (max < newArray[i])  {
+    if (max < newArray[i] ) {
       maxidx = i;
       max = newArray[i];
     }
   }
 
+  numbers = ref.numbers;
         // GETS VALUE OF MAX
   for (int i = 0; i<length; i++){
-    if (newArray[i] == max){
+    if ( newArray[i] == max){
       cout << numbers[i] << endl;
     }
   }
@@ -142,6 +144,6 @@ int main(){
 
   // Gets the number with the highest factors
   cout << "Number(s) with the highest factors: \n";
-  a1.getMaxAndVal;
+  getMaxAndVal(a1);
 
 }
