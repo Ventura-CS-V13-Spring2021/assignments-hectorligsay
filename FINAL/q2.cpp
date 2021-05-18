@@ -57,7 +57,7 @@ void integerArray::printArray(void) {
 }
 
 
-// GETS COUNT OF NUMBERS 
+// GETS COUNT OF NUMBERS AND DISPLAYS SIDE BY SIDE
 int integerArray::getCount(void){     
   int count = 0;
 
@@ -75,6 +75,7 @@ int integerArray::getCount(void){
   }
   cout << endl;
 }
+
 
 int main(){
   integerArray a1;
