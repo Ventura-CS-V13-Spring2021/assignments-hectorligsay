@@ -115,7 +115,7 @@ int integerArray::getNumDiv(void){
 
 
 int main(){
-  integerArray a1, a2;
+  integerArray a1;
 
   // Creates array and prints original
   cout << "ORIGINAL ARRAY: \t\t\n";
