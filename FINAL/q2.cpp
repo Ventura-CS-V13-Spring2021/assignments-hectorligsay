@@ -9,7 +9,6 @@ class integerArray{
 
 private: 
   int numbers[19] = {};     // initializes array w/ 19 empty spaces
-  int countArray[10] = {};
   int length = 0;               // length value is hidden
 public:
   int getNumbers(int);
@@ -66,28 +65,13 @@ int integerArray::getCount(void){
 
   for (int i = 0; i < length; i++){ 
     for (int j =0; j < length; j++){
-      if ( numbers[i] == numbers[j] ){
-        count ++;
-        *countArray = count;
-        continue;
-      }
-    
-    for (int k = 0; k < length; k++){
-      if (k=0)
-      {
-        continue;
-      }
-        if (countArray[k] == countArray[k-1])
-        {
-          break;
-        }
-        else{
-          cout << numbers[i] << "\t" << count << endl;
-          count = 0;
+        if ( numbers[i] == numbers[j] ){
+            count ++;
+            continue;
         }
     }
-    }
-
+    cout << numbers[i] << "\t" << count << endl;
+    count = 0;
   }
   cout << endl;
 }
